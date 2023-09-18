@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Todo List 2022 with LocalStorage</title>
+	
+	<link rel="stylesheet" href="Aditi.css" />
+	
+	<!--<link rel="preconnect" href="https://fonts.googleapis.com">-->
+	<!--<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
+	<!--<link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,400;0,700;0,900;1,400&family=Montserrat:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">-->
+	
+</head>
+<body>
+	
+	<main class="app">
+		<section class="greeting">
+			<h2 class="title">
+				What's up, <input style="border: none; outline: none;font-size: 23px; color: rgb(21,107, 107);font-family:'Times New Roman', Times, serif;font-weight: bold;" type="text" id="name" placeholder="Name here" />
+			</h2>
+
+
+			<div class="date-hour">
+                <p id="date"></p>
+                <p id="hour"></p>
+             </div>
+		</section><br>
+		
+		<section class="create-todo">
+			<h3>CREATE A TODO</h3><br>
+			<form id="new-todo-form">
+				<h4>What's on your todo?</h4><br>
+				<input 
+				style="box-shadow: 0.2px 0.2px 5.2px 5px rgba(207, 206, 206, 0.44) ; border: none;"
+					type="text" 
+					placeholder="e.g. Get some milk"
+					name="content"
+					id="content" />
+					<!-- <input id="dueDate" type="date"> -->
+					<br>
+				
+					<div class="search-container">
+						<input style="box-shadow: 0.2px 0.2px 5.2px 5px rgba(207, 206, 206, 0.44) ; border: none;" type="text" id="search-input" placeholder="Search todos..."/>
+						<button id="search-button">Search</button>
+					</div>
+				<h4>Pick a category</h4><br>
+				<div class="options">
+					<label>
+						<input type="radio" name="category" id="category1" value="business" /> 
+						<span class="bubble business"></span>
+						<div style="color: rgb(21, 107, 107);">Business</div>
+					</label>
+					<label>
+						<input type="radio" name="category" id="category2" value="personal" />
+						<span class="bubble personal"></span>
+						<div style="color: rgb(21,107, 107);">Personal</div>
+					</label>
+				</div><br>
+
+				<input style="color: aliceblue;" type="submit"  value="Add todo" />
+			</form>
+		</section><br>
+		
+		<section class="todo-list">
+			<h3>TODO LIST</h3>
+			<div class="list" id="todo-list">
+				<div class="todo-item">
+					<label >
+						<input type="checkbox">
+						<span class="bubble business"></span>
+						<div class="todo-content">
+							<input type="text" value="Example todo" readonly>
+						</div>
+						<div class="actions">
+							<button class="edit">Edit</button>
+							<button class="delete">Delete</button>
+						</div>
+					</label>
+				</div>
+			</div>
+		</section>
+		
+
+	</main>
+
+	<script src="temp.js"></script>
+	
+</body>
+</html>
